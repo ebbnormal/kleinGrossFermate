@@ -1,6 +1,6 @@
 == Klein Gross Fermate
 
-A simple web application to construct models for generating text based scores. The models are built using a simple Naive Bayes classifier.The musical  inspiration draws on the text-based compositions of Karlheinz Stockhausen (e.g. Aus Den Sieben Tagen, Für kommende Zeiten), George Lewis (Artificial Life, Sequel), and the 1960's work of Robert Ashley. 
+A simple web application to construct models for generating text based scores. The models are built using a simple Naive Bayes classifier.The musical  inspiration draws on the text-based compositions of Karlheinz Stockhausen (e.g. *Aus Den Sieben Tagen*, *Für kommende Zeiten*), George Lewis (*Artificial Life*, *Sequel*), and Robert Ashley. 
 
 
 Confer: https://en.wikipedia.org/wiki/Naive_Bayes_classifier.
