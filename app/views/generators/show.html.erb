@@ -1,10 +1,10 @@
 <div class="waiting">
   <div class="spinner">
-   <i class="fa fa-circle-o-notch fa-spin"></i>
+     <i class="fa fa-circle-o-notch fa-spin"></i>
   </div>
 </div>
-	<div class="wrapper">
-	<h1>
+<div class="wrapper">
+  <h1>
 	 <%= "Generator #{@generator.id}" %>
 	</h1>
 	MODEL - "Yes"
@@ -65,7 +65,9 @@
 	<br>
 	<%=link_to "Generator #{@generator.id} Scores", generator_scores_path(generator_id: @generator.id) %>
 	<br>
-	<%=link_to "Generate New Score" , new_generator_score_path(params[:id]), class: "new_score_submit"%>
+	<div class="new_score_submit">
+	<%=link_to "Generate New Score" , new_generator_score_path(params[:id])%>
+	</div>
 	<br>
 	<%=link_to "Home", root_path%>
 	</div>
