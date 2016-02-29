@@ -17,8 +17,8 @@ class ScoresController < ApplicationController
   end
 
   def show
+    @generator = Generator.find(params[:generator_id])
   	@score = Score.find(params[:id])
-  	Rails.logger.debug(@score.event4)
   end
 
   def score_params
@@ -28,8 +28,6 @@ class ScoresController < ApplicationController
   def index
   	@generator = Generator.find(params[:generator_id])
   	@scores = @generator.scores.all
-  	Rails.logger.debug(@scores.length)
-
   end
 
 end

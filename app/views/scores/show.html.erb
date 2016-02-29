@@ -3,69 +3,79 @@
 	Score
 </h1>
 <p>
- <%-if @score.event1 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event1 == "2"%>
-  <%= "Groß"%>
- <%else%>
+  <%-if @score.event1 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event1 == "2"%>
+    <%= "Groß"%>
+  <%else%>
    <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event2 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event2 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event3 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event3 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event4 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event4 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event5 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event5 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event6 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event6 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event7 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event7 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-<br>
- <%-if @score.event8 == "1"%>
- <%= "Klein"%>
- <% elsif @score.event8 == "2"%>
-  <%= "Groß"%>
- <%else%>
-   <%= "Fermate" %>
-<%end%>
-</p>
+  <%end%>
 
+  <br>
+  <%-if @score.event2 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event2 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+ 
+  <br>
+  <%-if @score.event3 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event3 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+
+  <br>
+  <%-if @score.event4 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event4 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+
+  <br>
+  <%-if @score.event5 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event5 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+   <%= "Fermate" %>
+  <%end%>
+
+  <br>
+  <%-if @score.event6 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event6 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+
+  <br>
+  <%-if @score.event7 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event7 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+
+  <br>
+  <%-if @score.event8 == "1"%>
+    <%= "Klein"%>
+  <% elsif @score.event8 == "2"%>
+    <%= "Groß"%>
+  <%else%>
+    <%= "Fermate" %>
+  <%end%>
+  </p>
+
+  <p>
+    <%=link_to "Generator #{@generator.id} Scores", generator_scores_path(generator_id:@generator.id) %>
+  </p>
 </div>
