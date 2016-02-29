@@ -1,0 +1,60 @@
+<div class="wrapper">
+
+MODEL - "Yes"
+<br>
+Event 1 Mean
+<%=@generator.event1_mean%>
+<br>
+Event 2 Mean
+<%=@generator.event2_mean%>
+<br>
+Event 3 Mean
+<%=@generator.event3_mean%>
+<br>
+Event 4 Mean
+<%=@generator.event4_mean%>
+<br>
+Event 5 Mean
+<%=@generator.event5_mean%>
+<br>
+Event 6 Mean
+<%=@generator.event6_mean%>
+<br>
+Event 7 Mean
+<%=@generator.event7_mean%>
+<br>
+Event 8 Mean
+<%=@generator.event8_mean%>
+
+<br>
+<p>
+MODEL - "No"
+<br>
+Event 1 Mean
+<%=@generator.event1_negative_mean%>
+<br>
+Event 2 Mean
+<%=@generator.event2_negative_mean%>
+<br>
+Event 3 Mean
+<%=@generator.event3_negative_mean%>
+<br>
+Event 4 Mean
+<%=@generator.event4_negative_mean%>
+<br>
+Event 5 Mean
+<%=@generator.event5_negative_mean%>
+<br>
+Event 6 Mean
+<%=@generator.event6_negative_mean%>
+<br>
+Event 7 Mean
+<%=@generator.event7_negative_mean%>
+<br>
+Event 8 Mean
+<%=@generator.event8_negative_mean%>
+</p>
+
+<br>
+<%=link_to "Generate New Score" , new_generator_score_path(params[:id]) %>
+</div>

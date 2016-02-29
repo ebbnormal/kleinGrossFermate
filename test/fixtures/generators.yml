@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event1_mean: 1.5
+  event1_variance: 1.5
+  event2_mean: 1.5
+  event2_variance: 1.5
+  event3_mean: 1.5
+  event3_variance: 1.5
+  event4_mean: 1.5
+  event4_variance: 1.5
+  event5_mean: 1.5
+  event5_variance: 1.5
+  event6_mean: 1.5
+  event6_variance: 1.5
+  event7_mean: 1.5
+  event7_variance: 1.5
+  event8_mean: 1.5
+  event8_variance: 1.5
+
+two:
+  event1_mean: 1.5
+  event1_variance: 1.5
+  event2_mean: 1.5
+  event2_variance: 1.5
+  event3_mean: 1.5
+  event3_variance: 1.5
+  event4_mean: 1.5
+  event4_variance: 1.5
+  event5_mean: 1.5
+  event5_variance: 1.5
+  event6_mean: 1.5
+  event6_variance: 1.5
+  event7_mean: 1.5
+  event7_variance: 1.5
+  event8_mean: 1.5
+  event8_variance: 1.5

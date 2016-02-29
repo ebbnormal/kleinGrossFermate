@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event1: MyString
+  event1_duration: 1.5
+  event2: MyString
+  event2_duration: 1.5
+  event3: MyString
+  event3_duration: 1.5
+  event4: MyString
+  event4_duration: 1.5
+  event5: MyString
+  event5_duration: 1.5
+  event6: MyString
+  event6_duration: 1.5
+  event7: MyString
+  event7_duration: 1.5
+  event8: MyString
+  event8_duration: 1.5
+
+two:
+  event1: MyString
+  event1_duration: 1.5
+  event2: MyString
+  event2_duration: 1.5
+  event3: MyString
+  event3_duration: 1.5
+  event4: MyString
+  event4_duration: 1.5
+  event5: MyString
+  event5_duration: 1.5
+  event6: MyString
+  event6_duration: 1.5
+  event7: MyString
+  event7_duration: 1.5
+  event8: MyString
+  event8_duration: 1.5

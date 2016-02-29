@@ -1,0 +1,29 @@
+.quote{
+  font-style:italic;
+  margin-bottom:15px;
+}
+.bold{
+font-style:bold;
+font-style:normal;
+font-variant:small-caps;
+
+}
+.wrapper{
+ width:600px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+body{
+ font-family: Futura;
+ font-size:14pt;
+}
+
+.about{
+  margin-bottom:30px;
+}
+
+.training_score{
+  margin-bottom:200px;
+
+}

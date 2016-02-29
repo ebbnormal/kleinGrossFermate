@@ -1,0 +1,1680 @@
+<div class="wrapper">
+<%= form_for :generator, url:generators_path do |f| %>
+<div class="errors">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: name %>
+  <% end %>
+</div>
+
+<div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_1 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_1_event_1%>
+    </h3>
+    <%= f.label :score_1_event_1, "Klein", value: 1%>
+    <% if @score_1_event_1 == 1 %>
+      <%= f.radio_button :score_1_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_1_event_1, "Groß", value:2%>
+    <% if @score_1_event_1 == 2 %>
+      <%= f.radio_button :score_1_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_1, "Fermate", value:3%>
+    <% if @score_1_event_1 == 3 %>
+      <%= f.radio_button :score_1_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_2%>
+    </h3>
+    <%= f.label :score_1_event_2, "Klein", value: "1"%>
+    <% if @score_1_event_2 == 1 %>
+      <%= f.radio_button :score_1_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_1_event_2, "Groß", value:"2"%>
+    <% if @score_1_event_2 == 2 %>
+      <%= f.radio_button :score_1_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_1_event_2, "Fermate", value:"3"%>
+    <% if @score_1_event_2 == 3 %>
+      <%= f.radio_button :score_1_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_3%>
+    </h3>
+    <%= f.label :score_1_event_3, "Klein", value: "1"%>
+    <% if @score_1_event_3 == 1 %>
+      <%= f.radio_button :score_1_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_1_event_3, "Groß", value:"2"%>
+    <% if @score_1_event_3 == 2 %>
+      <%= f.radio_button :score_1_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_1_event_3, "Fermate", value:"3"%>
+    <% if @score_1_event_3 == 3 %>
+      <%= f.radio_button :score_1_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_4%>
+    </h3>
+    <%= f.label :score_1_event_4, "Klein", value: "1"%>
+    <% if @score_1_event_4 == 1 %>
+      <%= f.radio_button :score_1_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_1_event_4, "Groß", value:"2"%>
+    <% if @score_1_event_4 == 2 %>
+      <%= f.radio_button :score_1_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_4, "Fermate", value:"3"%>
+    <% if @score_1_event_4 == 3 %>
+      <%= f.radio_button :score_1_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_5%>
+    </h3>
+    <%= f.label :score_1_event_5, "Klein", value: "1"%>
+    <% if @score_1_event_5 == 1 %>
+      <%= f.radio_button :score_1_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_1_event_5, "Groß", value:"2"%>
+    <% if @score_1_event_5 == 2 %>
+      <%= f.radio_button :score_1_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_5, "Fermate", value:"3"%>
+    <% if @score_1_event_5 == 3 %>
+      <%= f.radio_button :score_1_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_6%>
+    </h3>
+    <%= f.label :score_1_event_6, "Klein", value: "1"%>
+    <% if @score_1_event_6 == 1 %>
+      <%= f.radio_button :score_1_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_1_event_6, "Groß", value:"2"%>
+    <% if @score_1_event_6 == 2 %>
+      <%= f.radio_button :score_1_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_6, "Fermate", value:"3"%>
+    <% if @score_1_event_6 == 3 %>
+      <%= f.radio_button :score_1_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_7%>
+    </h3>
+    <%= f.label :score_1_event_7, "Klein", value: "1"%>
+    <% if @score_1_event_7 == 1 %>
+      <%= f.radio_button :score_1_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_1_event_7, "Groß", value:"2"%>
+    <% if @score_1_event_7 == 2 %>
+      <%= f.radio_button :score_1_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_7, "Fermate", value:"3"%>
+    <% if @score_1_event_7 == 3 %>
+      <%= f.radio_button :score_1_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_1_event_8%>
+    </h3>
+    <%= f.label :score_1_event_8, "Klein", value: "1"%>
+    <% if @score_1_event_8 == 1 %>
+      <%= f.radio_button :score_1_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_1_event_8, "Groß", value:"2"%>
+    <% if @score_1_event_8 == 2 %>
+      <%= f.radio_button :score_1_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_1_event_8, "Fermate", value:"3"%>
+    <% if @score_1_event_8 == 3 %>
+      <%= f.radio_button :score_1_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_1_event_8, 3 %>
+    <%end%>
+  </p>
+
+  <p>
+    <h3>
+    <%= f.label :score_1_label %>
+    </h3>
+    <%= f.label :score_1_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_1_label, true %>
+    <%= f.label :score_1_label, "No", value:"false"%>
+    <%= f.radio_button :score_1_label, false%>
+  </p>
+
+ </div>
+  <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_2 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_2_event_1%>
+    </h3>
+    <%= f.label :score_2_event_1, "Klein", value: 1%>
+    <% if @score_2_event_1 == 1 %>
+      <%= f.radio_button :score_2_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_2_event_1, "Groß", value:2%>
+    <% if @score_2_event_1 == 2 %>
+      <%= f.radio_button :score_2_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_1, "Fermate", value:3%>
+    <% if @score_2_event_1 == 3 %>
+      <%= f.radio_button :score_2_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_2%>
+    </h3>
+    <%= f.label :score_2_event_2, "Klein", value: "1"%>
+    <% if @score_2_event_2 == 1 %>
+      <%= f.radio_button :score_2_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_2_event_2, "Groß", value:"2"%>
+    <% if @score_2_event_2 == 2 %>
+      <%= f.radio_button :score_2_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_2_event_2, "Fermate", value:"3"%>
+    <% if @score_2_event_2 == 3 %>
+      <%= f.radio_button :score_2_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_3%>
+    </h3>
+    <%= f.label :score_2_event_3, "Klein", value: "1"%>
+    <% if @score_2_event_3 == 1 %>
+      <%= f.radio_button :score_2_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_2_event_3, "Groß", value:"2"%>
+    <% if @score_2_event_3 == 2 %>
+      <%= f.radio_button :score_2_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_2_event_3, "Fermate", value:"3"%>
+    <% if @score_2_event_3 == 3 %>
+      <%= f.radio_button :score_2_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_4%>
+    </h3>
+    <%= f.label :score_2_event_4, "Klein", value: "1"%>
+    <% if @score_2_event_4 == 1 %>
+      <%= f.radio_button :score_2_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_2_event_4, "Groß", value:"2"%>
+    <% if @score_2_event_4 == 2 %>
+      <%= f.radio_button :score_2_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_4, "Fermate", value:"3"%>
+    <% if @score_2_event_4 == 3 %>
+      <%= f.radio_button :score_2_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_5%>
+    </h3>
+    <%= f.label :score_2_event_5, "Klein", value: "1"%>
+    <% if @score_2_event_5 == 1 %>
+      <%= f.radio_button :score_2_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_2_event_5, "Groß", value:"2"%>
+    <% if @score_2_event_5 == 2 %>
+      <%= f.radio_button :score_2_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_5, "Fermate", value:"3"%>
+    <% if @score_2_event_5 == 3 %>
+      <%= f.radio_button :score_2_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_6%>
+    </h3>
+    <%= f.label :score_2_event_6, "Klein", value: "1"%>
+    <% if @score_2_event_6 == 1 %>
+      <%= f.radio_button :score_2_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_2_event_6, "Groß", value:"2"%>
+    <% if @score_2_event_6 == 2 %>
+      <%= f.radio_button :score_2_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_6, "Fermate", value:"3"%>
+    <% if @score_2_event_6 == 3 %>
+      <%= f.radio_button :score_2_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_7%>
+    </h3>
+    <%= f.label :score_2_event_7, "Klein", value: "1"%>
+    <% if @score_2_event_7 == 1 %>
+      <%= f.radio_button :score_2_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_2_event_7, "Groß", value:"2"%>
+    <% if @score_2_event_7 == 2 %>
+      <%= f.radio_button :score_2_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_7, "Fermate", value:"3"%>
+    <% if @score_2_event_7 == 3 %>
+      <%= f.radio_button :score_2_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_2_event_8%>
+    </h3>
+    <%= f.label :score_2_event_8, "Klein", value: "1"%>
+    <% if @score_2_event_8 == 1 %>
+      <%= f.radio_button :score_2_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_2_event_8, "Groß", value:"2"%>
+    <% if @score_2_event_8 == 2 %>
+      <%= f.radio_button :score_2_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_2_event_8, "Fermate", value:"3"%>
+    <% if @score_2_event_8 == 3 %>
+      <%= f.radio_button :score_2_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_2_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_2_label %>
+    </h3>
+    <%= f.label :score_2_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_2_label, true %>
+    <%= f.label :score_2_label, "No", value:"false"%>
+    <%= f.radio_button :score_2_label, false%>
+  </p>
+  </div>     
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_3 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_3_event_1%>
+    </h3>
+    <%= f.label :score_3_event_1, "Klein", value: 1%>
+    <% if @score_3_event_1 == 1 %>
+      <%= f.radio_button :score_3_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_3_event_1, "Groß", value:2%>
+    <% if @score_3_event_1 == 2 %>
+      <%= f.radio_button :score_3_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_1, "Fermate", value:3%>
+    <% if @score_3_event_1 == 3 %>
+      <%= f.radio_button :score_3_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_2%>
+    </h3>
+    <%= f.label :score_3_event_2, "Klein", value: "1"%>
+    <% if @score_3_event_2 == 1 %>
+      <%= f.radio_button :score_3_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_3_event_2, "Groß", value:"2"%>
+    <% if @score_3_event_2 == 2 %>
+      <%= f.radio_button :score_3_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_3_event_2, "Fermate", value:"3"%>
+    <% if @score_3_event_2 == 3 %>
+      <%= f.radio_button :score_3_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_3%>
+    </h3>
+    <%= f.label :score_3_event_3, "Klein", value: "1"%>
+    <% if @score_3_event_3 == 1 %>
+      <%= f.radio_button :score_3_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_3_event_3, "Groß", value:"2"%>
+    <% if @score_3_event_3 == 2 %>
+      <%= f.radio_button :score_3_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_3_event_3, "Fermate", value:"3"%>
+    <% if @score_3_event_3 == 3 %>
+      <%= f.radio_button :score_3_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_4%>
+    </h3>
+    <%= f.label :score_3_event_4, "Klein", value: "1"%>
+    <% if @score_3_event_4 == 1 %>
+      <%= f.radio_button :score_3_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_3_event_4, "Groß", value:"2"%>
+    <% if @score_3_event_4 == 2 %>
+      <%= f.radio_button :score_3_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_4, "Fermate", value:"3"%>
+    <% if @score_3_event_4 == 3 %>
+      <%= f.radio_button :score_3_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_5%>
+    </h3>
+    <%= f.label :score_3_event_5, "Klein", value: "1"%>
+    <% if @score_3_event_5 == 1 %>
+      <%= f.radio_button :score_3_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_3_event_5, "Groß", value:"2"%>
+    <% if @score_3_event_5 == 2 %>
+      <%= f.radio_button :score_3_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_5, "Fermate", value:"3"%>
+    <% if @score_3_event_5 == 3 %>
+      <%= f.radio_button :score_3_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_6%>
+    </h3>
+    <%= f.label :score_3_event_6, "Klein", value: "1"%>
+    <% if @score_3_event_6 == 1 %>
+      <%= f.radio_button :score_3_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_3_event_6, "Groß", value:"2"%>
+    <% if @score_3_event_6 == 2 %>
+      <%= f.radio_button :score_3_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_6, "Fermate", value:"3"%>
+    <% if @score_3_event_6 == 3 %>
+      <%= f.radio_button :score_3_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_7%>
+    </h3>
+    <%= f.label :score_3_event_7, "Klein", value: "1"%>
+    <% if @score_3_event_7 == 1 %>
+      <%= f.radio_button :score_3_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_3_event_7, "Groß", value:"2"%>
+    <% if @score_3_event_7 == 2 %>
+      <%= f.radio_button :score_3_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_7, "Fermate", value:"3"%>
+    <% if @score_3_event_7 == 3 %>
+      <%= f.radio_button :score_3_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_3_event_8%>
+    </h3>
+    <%= f.label :score_3_event_8, "Klein", value: "1"%>
+    <% if @score_3_event_8 == 1 %>
+      <%= f.radio_button :score_3_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_3_event_8, "Groß", value:"2"%>
+    <% if @score_3_event_8 == 2 %>
+      <%= f.radio_button :score_3_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_3_event_8, "Fermate", value:"3"%>
+    <% if @score_3_event_8 == 3 %>
+      <%= f.radio_button :score_3_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_3_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_3_label %>
+    </h3>
+    <%= f.label :score_3_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_3_label, true %>
+    <%= f.label :score_3_label, "No", value:"false"%>
+    <%= f.radio_button :score_3_label, false%>
+  </p>
+  </div>    
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_4 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_4_event_1%>
+    </h3>
+    <%= f.label :score_4_event_1, "Klein", value: 1%>
+    <% if @score_4_event_1 == 1 %>
+      <%= f.radio_button :score_4_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_4_event_1, "Groß", value:2%>
+    <% if @score_4_event_1 == 2 %>
+      <%= f.radio_button :score_4_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_1, "Fermate", value:3%>
+    <% if @score_4_event_1 == 3 %>
+      <%= f.radio_button :score_4_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_2%>
+    </h3>
+    <%= f.label :score_4_event_2, "Klein", value: "1"%>
+    <% if @score_4_event_2 == 1 %>
+      <%= f.radio_button :score_4_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_4_event_2, "Groß", value:"2"%>
+    <% if @score_4_event_2 == 2 %>
+      <%= f.radio_button :score_4_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_4_event_2, "Fermate", value:"3"%>
+    <% if @score_4_event_2 == 3 %>
+      <%= f.radio_button :score_4_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_3%>
+    </h3>
+    <%= f.label :score_4_event_3, "Klein", value: "1"%>
+    <% if @score_4_event_3 == 1 %>
+      <%= f.radio_button :score_4_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_4_event_3, "Groß", value:"2"%>
+    <% if @score_4_event_3 == 2 %>
+      <%= f.radio_button :score_4_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_4_event_3, "Fermate", value:"3"%>
+    <% if @score_4_event_3 == 3 %>
+      <%= f.radio_button :score_4_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_4%>
+    </h3>
+    <%= f.label :score_4_event_4, "Klein", value: "1"%>
+    <% if @score_4_event_4 == 1 %>
+      <%= f.radio_button :score_4_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_4_event_4, "Groß", value:"2"%>
+    <% if @score_4_event_4 == 2 %>
+      <%= f.radio_button :score_4_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_4, "Fermate", value:"3"%>
+    <% if @score_4_event_4 == 3 %>
+      <%= f.radio_button :score_4_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_5%>
+    </h3>
+    <%= f.label :score_4_event_5, "Klein", value: "1"%>
+    <% if @score_4_event_5 == 1 %>
+      <%= f.radio_button :score_4_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_4_event_5, "Groß", value:"2"%>
+    <% if @score_4_event_5 == 2 %>
+      <%= f.radio_button :score_4_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_5, "Fermate", value:"3"%>
+    <% if @score_4_event_5 == 3 %>
+      <%= f.radio_button :score_4_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_6%>
+    </h3>
+    <%= f.label :score_4_event_6, "Klein", value: "1"%>
+    <% if @score_4_event_6 == 1 %>
+      <%= f.radio_button :score_4_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_4_event_6, "Groß", value:"2"%>
+    <% if @score_4_event_6 == 2 %>
+      <%= f.radio_button :score_4_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_6, "Fermate", value:"3"%>
+    <% if @score_4_event_6 == 3 %>
+      <%= f.radio_button :score_4_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_7%>
+    </h3>
+    <%= f.label :score_4_event_7, "Klein", value: "1"%>
+    <% if @score_4_event_7 == 1 %>
+      <%= f.radio_button :score_4_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_4_event_7, "Groß", value:"2"%>
+    <% if @score_4_event_7 == 2 %>
+      <%= f.radio_button :score_4_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_7, "Fermate", value:"3"%>
+    <% if @score_4_event_7 == 3 %>
+      <%= f.radio_button :score_4_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_4_event_8%>
+    </h3>
+    <%= f.label :score_4_event_8, "Klein", value: "1"%>
+    <% if @score_4_event_8 == 1 %>
+      <%= f.radio_button :score_4_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_4_event_8, "Groß", value:"2"%>
+    <% if @score_4_event_8 == 2 %>
+      <%= f.radio_button :score_4_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_4_event_8, "Fermate", value:"3"%>
+    <% if @score_4_event_8 == 3 %>
+      <%= f.radio_button :score_4_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_4_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_4_label %>
+    </h3>
+    <%= f.label :score_4_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_4_label, true %>
+    <%= f.label :score_4_label, "No", value:"false"%>
+    <%= f.radio_button :score_4_label, false%>
+  </p>
+  </div>    
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_5 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_5_event_1%>
+    </h3>
+    <%= f.label :score_5_event_1, "Klein", value: 1%>
+    <% if @score_5_event_1 == 1 %>
+      <%= f.radio_button :score_5_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_5_event_1, "Groß", value:2%>
+    <% if @score_5_event_1 == 2 %>
+      <%= f.radio_button :score_5_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_1, "Fermate", value:3%>
+    <% if @score_5_event_1 == 3 %>
+      <%= f.radio_button :score_5_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_2%>
+    </h3>
+    <%= f.label :score_5_event_2, "Klein", value: "1"%>
+    <% if @score_5_event_2 == 1 %>
+      <%= f.radio_button :score_5_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_5_event_2, "Groß", value:"2"%>
+    <% if @score_5_event_2 == 2 %>
+      <%= f.radio_button :score_5_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_5_event_2, "Fermate", value:"3"%>
+    <% if @score_5_event_2 == 3 %>
+      <%= f.radio_button :score_5_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_3%>
+    </h3>
+    <%= f.label :score_5_event_3, "Klein", value: "1"%>
+    <% if @score_5_event_3 == 1 %>
+      <%= f.radio_button :score_5_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_5_event_3, "Groß", value:"2"%>
+    <% if @score_5_event_3 == 2 %>
+      <%= f.radio_button :score_5_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_5_event_3, "Fermate", value:"3"%>
+    <% if @score_5_event_3 == 3 %>
+      <%= f.radio_button :score_5_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_4%>
+    </h3>
+    <%= f.label :score_5_event_4, "Klein", value: "1"%>
+    <% if @score_5_event_4 == 1 %>
+      <%= f.radio_button :score_5_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_5_event_4, "Groß", value:"2"%>
+    <% if @score_5_event_4 == 2 %>
+      <%= f.radio_button :score_5_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_4, "Fermate", value:"3"%>
+    <% if @score_5_event_4 == 3 %>
+      <%= f.radio_button :score_5_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_5%>
+    </h3>
+    <%= f.label :score_5_event_5, "Klein", value: "1"%>
+    <% if @score_5_event_5 == 1 %>
+      <%= f.radio_button :score_5_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_5_event_5, "Groß", value:"2"%>
+    <% if @score_5_event_5 == 2 %>
+      <%= f.radio_button :score_5_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_5, "Fermate", value:"3"%>
+    <% if @score_5_event_5 == 3 %>
+      <%= f.radio_button :score_5_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_6%>
+    </h3>
+    <%= f.label :score_5_event_6, "Klein", value: "1"%>
+    <% if @score_5_event_6 == 1 %>
+      <%= f.radio_button :score_5_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_5_event_6, "Groß", value:"2"%>
+    <% if @score_5_event_6 == 2 %>
+      <%= f.radio_button :score_5_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_6, "Fermate", value:"3"%>
+    <% if @score_5_event_6 == 3 %>
+      <%= f.radio_button :score_5_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_7%>
+    </h3>
+    <%= f.label :score_5_event_7, "Klein", value: "1"%>
+    <% if @score_5_event_7 == 1 %>
+      <%= f.radio_button :score_5_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_5_event_7, "Groß", value:"2"%>
+    <% if @score_5_event_7 == 2 %>
+      <%= f.radio_button :score_5_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_7, "Fermate", value:"3"%>
+    <% if @score_5_event_7 == 3 %>
+      <%= f.radio_button :score_5_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_5_event_8%>
+    </h3>
+    <%= f.label :score_5_event_8, "Klein", value: "1"%>
+    <% if @score_5_event_8 == 1 %>
+      <%= f.radio_button :score_5_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_5_event_8, "Groß", value:"2"%>
+    <% if @score_5_event_8 == 2 %>
+      <%= f.radio_button :score_5_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_5_event_8, "Fermate", value:"3"%>
+    <% if @score_5_event_8 == 3 %>
+      <%= f.radio_button :score_5_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_5_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_5_label %>
+    </h3>
+    <%= f.label :score_5_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_5_label, true %>
+    <%= f.label :score_5_label, "No", value:"false"%>
+    <%= f.radio_button :score_5_label, false%>
+  </p>
+  </div>    
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_6 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_6_event_1%>
+    </h3>
+    <%= f.label :score_6_event_1, "Klein", value: 1%>
+    <% if @score_6_event_1 == 1 %>
+      <%= f.radio_button :score_6_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_6_event_1, "Groß", value:2%>
+    <% if @score_6_event_1 == 2 %>
+      <%= f.radio_button :score_6_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_1, "Fermate", value:3%>
+    <% if @score_6_event_1 == 3 %>
+      <%= f.radio_button :score_6_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_2%>
+    </h3>
+    <%= f.label :score_6_event_2, "Klein", value: "1"%>
+    <% if @score_6_event_2 == 1 %>
+      <%= f.radio_button :score_6_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_6_event_2, "Groß", value:"2"%>
+    <% if @score_6_event_2 == 2 %>
+      <%= f.radio_button :score_6_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_6_event_2, "Fermate", value:"3"%>
+    <% if @score_6_event_2 == 3 %>
+      <%= f.radio_button :score_6_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_3%>
+    </h3>
+    <%= f.label :score_6_event_3, "Klein", value: "1"%>
+    <% if @score_6_event_3 == 1 %>
+      <%= f.radio_button :score_6_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_6_event_3, "Groß", value:"2"%>
+    <% if @score_6_event_3 == 2 %>
+      <%= f.radio_button :score_6_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_6_event_3, "Fermate", value:"3"%>
+    <% if @score_6_event_3 == 3 %>
+      <%= f.radio_button :score_6_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_4%>
+    </h3>
+    <%= f.label :score_6_event_4, "Klein", value: "1"%>
+    <% if @score_6_event_4 == 1 %>
+      <%= f.radio_button :score_6_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_6_event_4, "Groß", value:"2"%>
+    <% if @score_6_event_4 == 2 %>
+      <%= f.radio_button :score_6_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_4, "Fermate", value:"3"%>
+    <% if @score_6_event_4 == 3 %>
+      <%= f.radio_button :score_6_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_5%>
+    </h3>
+    <%= f.label :score_6_event_5, "Klein", value: "1"%>
+    <% if @score_6_event_5 == 1 %>
+      <%= f.radio_button :score_6_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_6_event_5, "Groß", value:"2"%>
+    <% if @score_6_event_5 == 2 %>
+      <%= f.radio_button :score_6_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_5, "Fermate", value:"3"%>
+    <% if @score_6_event_5 == 3 %>
+      <%= f.radio_button :score_6_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_6%>
+    </h3>
+    <%= f.label :score_6_event_6, "Klein", value: "1"%>
+    <% if @score_6_event_6 == 1 %>
+      <%= f.radio_button :score_6_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_6_event_6, "Groß", value:"2"%>
+    <% if @score_6_event_6 == 2 %>
+      <%= f.radio_button :score_6_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_6, "Fermate", value:"3"%>
+    <% if @score_6_event_6 == 3 %>
+      <%= f.radio_button :score_6_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_7%>
+    </h3>
+    <%= f.label :score_6_event_7, "Klein", value: "1"%>
+    <% if @score_6_event_7 == 1 %>
+      <%= f.radio_button :score_6_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_6_event_7, "Groß", value:"2"%>
+    <% if @score_6_event_7 == 2 %>
+      <%= f.radio_button :score_6_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_7, "Fermate", value:"3"%>
+    <% if @score_6_event_7 == 3 %>
+      <%= f.radio_button :score_6_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_6_event_8%>
+    </h3>
+    <%= f.label :score_6_event_8, "Klein", value: "1"%>
+    <% if @score_6_event_8 == 1 %>
+      <%= f.radio_button :score_6_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_6_event_8, "Groß", value:"2"%>
+    <% if @score_6_event_8 == 2 %>
+      <%= f.radio_button :score_6_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_6_event_8, "Fermate", value:"3"%>
+    <% if @score_6_event_8 == 3 %>
+      <%= f.radio_button :score_6_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_6_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_6_label %>
+    </h3>
+    <%= f.label :score_6_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_6_label, true %>
+    <%= f.label :score_6_label, "No", value:"false"%>
+    <%= f.radio_button :score_6_label, false%>
+  </p>
+  </div>    
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_7 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_7_event_1%>
+    </h3>
+    <%= f.label :score_7_event_1, "Klein", value: 1%>
+    <% if @score_7_event_1 == 1 %>
+      <%= f.radio_button :score_7_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_7_event_1, "Groß", value:2%>
+    <% if @score_7_event_1 == 2 %>
+      <%= f.radio_button :score_7_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_1, "Fermate", value:3%>
+    <% if @score_7_event_1 == 3 %>
+      <%= f.radio_button :score_7_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_2%>
+    </h3>
+    <%= f.label :score_7_event_2, "Klein", value: "1"%>
+    <% if @score_7_event_2 == 1 %>
+      <%= f.radio_button :score_7_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_7_event_2, "Groß", value:"2"%>
+    <% if @score_7_event_2 == 2 %>
+      <%= f.radio_button :score_7_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_7_event_2, "Fermate", value:"3"%>
+    <% if @score_7_event_2 == 3 %>
+      <%= f.radio_button :score_7_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_3%>
+    </h3>
+    <%= f.label :score_7_event_3, "Klein", value: "1"%>
+    <% if @score_7_event_3 == 1 %>
+      <%= f.radio_button :score_7_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_7_event_3, "Groß", value:"2"%>
+    <% if @score_7_event_3 == 2 %>
+      <%= f.radio_button :score_7_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_7_event_3, "Fermate", value:"3"%>
+    <% if @score_7_event_3 == 3 %>
+      <%= f.radio_button :score_7_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_4%>
+    </h3>
+    <%= f.label :score_7_event_4, "Klein", value: "1"%>
+    <% if @score_7_event_4 == 1 %>
+      <%= f.radio_button :score_7_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_7_event_4, "Groß", value:"2"%>
+    <% if @score_7_event_4 == 2 %>
+      <%= f.radio_button :score_7_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_4, "Fermate", value:"3"%>
+    <% if @score_7_event_4 == 3 %>
+      <%= f.radio_button :score_7_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_5%>
+    </h3>
+    <%= f.label :score_7_event_5, "Klein", value: "1"%>
+    <% if @score_7_event_5 == 1 %>
+      <%= f.radio_button :score_7_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_7_event_5, "Groß", value:"2"%>
+    <% if @score_7_event_5 == 2 %>
+      <%= f.radio_button :score_7_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_5, "Fermate", value:"3"%>
+    <% if @score_7_event_5 == 3 %>
+      <%= f.radio_button :score_7_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_6%>
+    </h3>
+    <%= f.label :score_7_event_6, "Klein", value: "1"%>
+    <% if @score_7_event_6 == 1 %>
+      <%= f.radio_button :score_7_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_7_event_6, "Groß", value:"2"%>
+    <% if @score_7_event_6 == 2 %>
+      <%= f.radio_button :score_7_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_6, "Fermate", value:"3"%>
+    <% if @score_7_event_6 == 3 %>
+      <%= f.radio_button :score_7_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_7%>
+    </h3>
+    <%= f.label :score_7_event_7, "Klein", value: "1"%>
+    <% if @score_7_event_7 == 1 %>
+      <%= f.radio_button :score_7_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_7_event_7, "Groß", value:"2"%>
+    <% if @score_7_event_7 == 2 %>
+      <%= f.radio_button :score_7_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_7, "Fermate", value:"3"%>
+    <% if @score_7_event_7 == 3 %>
+      <%= f.radio_button :score_7_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_7_event_8%>
+    </h3>
+    <%= f.label :score_7_event_8, "Klein", value: "1"%>
+    <% if @score_7_event_8 == 1 %>
+      <%= f.radio_button :score_7_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_7_event_8, "Groß", value:"2"%>
+    <% if @score_7_event_8 == 2 %>
+      <%= f.radio_button :score_7_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_7_event_8, "Fermate", value:"3"%>
+    <% if @score_7_event_8 == 3 %>
+      <%= f.radio_button :score_7_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_7_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_7_label %>
+    </h3>
+    <%= f.label :score_7_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_7_label, true %>
+    <%= f.label :score_7_label, "No", value:"false"%>
+    <%= f.radio_button :score_7_label, false%>
+  </p>
+  </div>    
+   <div class="training_score">
+  <p>
+    <h2>
+    <%= f.label :score_8 %>
+    </h2>
+   <p>
+    <h3>
+    <%= f.label :score_8_event_1%>
+    </h3>
+    <%= f.label :score_8_event_1, "Klein", value: 1%>
+    <% if @score_8_event_1 == 1 %>
+      <%= f.radio_button :score_8_event_1, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_1, 1 %>
+    <%end%>
+
+    <%= f.label :score_8_event_1, "Groß", value:2%>
+    <% if @score_8_event_1 == 2 %>
+      <%= f.radio_button :score_8_event_1, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_1, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_1, "Fermate", value:3%>
+    <% if @score_8_event_1 == 3 %>
+      <%= f.radio_button :score_8_event_1, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_1, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_2%>
+    </h3>
+    <%= f.label :score_8_event_2, "Klein", value: "1"%>
+    <% if @score_8_event_2 == 1 %>
+      <%= f.radio_button :score_8_event_2, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_2, 1 %>
+    <%end%>
+
+
+
+    <%= f.label :score_8_event_2, "Groß", value:"2"%>
+    <% if @score_8_event_2 == 2 %>
+      <%= f.radio_button :score_8_event_2, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_2, 2 %>
+    <%end%>
+
+
+    <%= f.label :score_8_event_2, "Fermate", value:"3"%>
+    <% if @score_8_event_2 == 3 %>
+      <%= f.radio_button :score_8_event_2, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_2, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_3%>
+    </h3>
+    <%= f.label :score_8_event_3, "Klein", value: "1"%>
+    <% if @score_8_event_3 == 1 %>
+      <%= f.radio_button :score_8_event_3, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_3, 1 %>
+    <%end%>
+
+    <%= f.label :score_8_event_3, "Groß", value:"2"%>
+    <% if @score_8_event_3 == 2 %>
+      <%= f.radio_button :score_8_event_3, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_3, 2 %>
+    <%end%>
+
+    <%= f.label :score_8_event_3, "Fermate", value:"3"%>
+    <% if @score_8_event_3 == 3 %>
+      <%= f.radio_button :score_8_event_3, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_3, 3 %>
+    <%end%>
+
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_4%>
+    </h3>
+    <%= f.label :score_8_event_4, "Klein", value: "1"%>
+    <% if @score_8_event_4 == 1 %>
+      <%= f.radio_button :score_8_event_4, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_4, 1 %>
+    <%end%>
+    <%= f.label :score_8_event_4, "Groß", value:"2"%>
+    <% if @score_8_event_4 == 2 %>
+      <%= f.radio_button :score_8_event_4, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_4, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_4, "Fermate", value:"3"%>
+    <% if @score_8_event_4 == 3 %>
+      <%= f.radio_button :score_8_event_4, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_4, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_5%>
+    </h3>
+    <%= f.label :score_8_event_5, "Klein", value: "1"%>
+    <% if @score_8_event_5 == 1 %>
+      <%= f.radio_button :score_8_event_5, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_5, 1 %>
+    <%end%>
+    <%= f.label :score_8_event_5, "Groß", value:"2"%>
+    <% if @score_8_event_5 == 2 %>
+      <%= f.radio_button :score_8_event_5, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_5, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_5, "Fermate", value:"3"%>
+    <% if @score_8_event_5 == 3 %>
+      <%= f.radio_button :score_8_event_5, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_5, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_6%>
+    </h3>
+    <%= f.label :score_8_event_6, "Klein", value: "1"%>
+    <% if @score_8_event_6 == 1 %>
+      <%= f.radio_button :score_8_event_6, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_6, 1 %>
+    <%end%>
+    <%= f.label :score_8_event_6, "Groß", value:"2"%>
+    <% if @score_8_event_6 == 2 %>
+      <%= f.radio_button :score_8_event_6, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_6, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_6, "Fermate", value:"3"%>
+    <% if @score_8_event_6 == 3 %>
+      <%= f.radio_button :score_8_event_6, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_6, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_7%>
+    </h3>
+    <%= f.label :score_8_event_7, "Klein", value: "1"%>
+    <% if @score_8_event_7 == 1 %>
+      <%= f.radio_button :score_8_event_7, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_7, 1 %>
+    <%end%>
+    <%= f.label :score_8_event_7, "Groß", value:"2"%>
+    <% if @score_8_event_7 == 2 %>
+      <%= f.radio_button :score_8_event_7, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_7, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_7, "Fermate", value:"3"%>
+    <% if @score_8_event_7 == 3 %>
+      <%= f.radio_button :score_8_event_7, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_7, 3 %>
+    <%end%>
+  </p>
+  <p>
+    <h3>
+    <%= f.label :score_8_event_8%>
+    </h3>
+    <%= f.label :score_8_event_8, "Klein", value: "1"%>
+    <% if @score_8_event_8 == 1 %>
+      <%= f.radio_button :score_8_event_8, 1, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_8, 1 %>
+    <%end%>
+    <%= f.label :score_8_event_8, "Groß", value:"2"%>
+    <% if @score_8_event_8 == 2 %>
+      <%= f.radio_button :score_8_event_8, 2, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_8, 2 %>
+    <%end%>
+    <%= f.label :score_8_event_8, "Fermate", value:"3"%>
+    <% if @score_8_event_8 == 3 %>
+      <%= f.radio_button :score_8_event_8, 3, {checked: true} %>
+    <%else%>
+      <%= f.radio_button :score_8_event_8, 3 %>
+    <%end%>
+  </p>
+    <p>
+    <h3>
+    <%= f.label :score_8_label %>
+    </h3>
+    <%= f.label :score_8_label, "Yes", value: "true"%>
+    <%= f.radio_button :score_8_label, true %>
+    <%= f.label :score_8_label, "No", value:"false"%>
+    <%= f.radio_button :score_8_label, false%>
+  </p>
+  </div>                     
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', generators_path %>
+</div>

@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <%@generators.each do |generator|%>
+   <%=link_to generator.created_at, generator_path(generator.id) %>
+   <br>
+
+
+
+  <%end%>
+</div>
