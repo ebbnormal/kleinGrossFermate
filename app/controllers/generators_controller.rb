@@ -14,7 +14,6 @@ class GeneratorsController < ApplicationController
       @generator.errors.full_messages.each do |msg|
         flash[:error] = msg
       end
-
       redirect_to action: "new"  
     end
   end

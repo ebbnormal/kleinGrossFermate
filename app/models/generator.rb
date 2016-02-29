@@ -33,7 +33,6 @@ class Generator < ActiveRecord::Base
     product
   end
 
-
   def generate_score
     meets_model_criteria = false
     new_score = Array.new(8)
@@ -88,9 +87,6 @@ class Generator < ActiveRecord::Base
       0
     end
   end
-
-
-
 
   def calculate_model(hash)
     (1..8).each do |n|

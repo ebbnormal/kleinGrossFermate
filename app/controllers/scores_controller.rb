@@ -29,5 +29,4 @@ class ScoresController < ApplicationController
   	@generator = Generator.find(params[:generator_id])
   	@scores = @generator.scores.all
   end
-
 end
