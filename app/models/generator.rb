@@ -4,14 +4,14 @@ class Generator < ActiveRecord::Base
   def calculate_posterior_numerator_postive(event_array)
     product = 1.0
     event_array.each_with_index do |event_n, n|
-      event_variance_symbol = "event#{n+1}_variance".to_sym
-      event_mean_symbol = "event#{n+1}_mean".to_sym
+      event_variance_symbol = "event#{n + 1}_variance".to_sym
+      event_mean_symbol = "event#{n + 1}_mean".to_sym
       variance  = read_attribute event_variance_symbol
       mean = read_attribute event_mean_symbol
       if variance == 0.0
         product = product * 1**(-(event_n - mean)**2)
       else
-        product = product * (1/Math.sqrt(2*Math::PI)*variance)**(-(event_n - mean)**2/(2*variance)) 
+        product = product * (1 / Math.sqrt(2 * Math::PI) * variance)**( -(event_n - mean)**2/(2 * variance) ) 
       end
     end
     product
@@ -20,14 +20,14 @@ class Generator < ActiveRecord::Base
   def calculate_posterior_numerator_negative(event_array)
     product = 1.0
     event_array.each_with_index do |event_n, n|
-      event_variance_symbol = "event#{n+1}_negative_variance".to_sym
-      event_mean_symbol = "event#{n+1}_negative_mean".to_sym
-      variance  = read_attribute event_variance_symbol
+      event_variance_symbol = "event#{n + 1}_negative_variance".to_sym
+      event_mean_symbol = "event#{n + 1}_negative_mean".to_sym
+      variance = read_attribute event_variance_symbol
       mean = read_attribute event_mean_symbol
       if variance == 0.0
         product = product * 1**(-(event_n - mean)**2)
       else
-        product = product * (1/Math.sqrt(2*Math::PI)*variance)**(-(event_n - mean)**2/(2*variance)) 
+        product = product * (1 / Math.sqrt(2 * Math::PI) * variance)**(-(event_n - mean)**2 / (2 * variance)) 
       end
     end
     product
@@ -40,14 +40,14 @@ class Generator < ActiveRecord::Base
     until meets_model_criteria == true
       #randomly generate 8 sonic events
       prng = Random.new(Time.now.to_i)
-      new_score[0] = prng.rand(3)+1
-      new_score[1] = prng.rand(3)+1
-      new_score[2] = prng.rand(3)+1
-      new_score[3] = prng.rand(3)+1
-      new_score[4] = prng.rand(3)+1
-      new_score[5] = prng.rand(3)+1
-      new_score[6] = prng.rand(3)+1
-      new_score[7] = prng.rand(3)+1
+      new_score[0] = prng.rand(3) + 1
+      new_score[1] = prng.rand(3) + 1
+      new_score[2] = prng.rand(3) + 1
+      new_score[3] = prng.rand(3) + 1
+      new_score[4] = prng.rand(3) + 1
+      new_score[5] = prng.rand(3) + 1
+      new_score[6] = prng.rand(3) + 1
+      new_score[7] = prng.rand(3) + 1
       
       #calculate respective probabilities for being in the model's class and
       #and for not belonging in the class
@@ -95,203 +95,99 @@ class Generator < ActiveRecord::Base
   def calculate_model(hash)
     (1..8).each do |n|
       n_label_string = "score_#{n}_label"
-      Rails.logger.debug("Hash label at #{n} is #{hash[n_label_string]}") 
-      #
-      #value = nil
-      #if hash[n_label_symbol] == "false"
-      #  Rails.logger.debug("It is false")
-      #  value = false
-      #else
-      #  value = true
-      #end
       update_attribute(n_label_string, hash[n_label_string])
     end
     
     positive_training_data = Hash.new()
-    positive_training_data["event_1"]  = []
-    positive_training_data["event_2"]  = []
-    positive_training_data["event_3"]  = []
-    positive_training_data["event_4"]  = []
-    positive_training_data["event_5"]  = []
-    positive_training_data["event_6"]  = []
-    positive_training_data["event_7"]  = []
-    positive_training_data["event_8"]  = []
-
+    (1..8).each do |n|
+      positive_training_data["event_#{n}"]  = []
+    end
+    
     negative_training_data = Hash.new()
-    negative_training_data["event_1"]  = []
-    negative_training_data["event_2"]  = []
-    negative_training_data["event_3"]  = []
-    negative_training_data["event_4"]  = []
-    negative_training_data["event_5"]  = []
-    negative_training_data["event_6"]  = []
-    negative_training_data["event_7"]  = []
-    negative_training_data["event_8"]  = []
+    (1..8).each do |n|
+      negative_training_data["event_#{n}"]  = []
+    end
+
     
     if hash["score_1_label"]== "true"
-     
-      positive_training_data["event_1"].push(hash[:score_1_event_1])
-      positive_training_data["event_2"].push(hash[:score_1_event_2])
-      positive_training_data["event_3"].push(hash[:score_1_event_3])
-      positive_training_data["event_4"].push(hash[:score_1_event_4])
-      positive_training_data["event_5"].push(hash[:score_1_event_5])
-      positive_training_data["event_6"].push(hash[:score_1_event_6])
-      positive_training_data["event_7"].push(hash[:score_1_event_7])
-      positive_training_data["event_8"].push(hash[:score_1_event_8])
-  
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_1_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_1_event_1])
-      negative_training_data["event_2"].push(hash[:score_1_event_2])
-      negative_training_data["event_3"].push(hash[:score_1_event_3])
-      negative_training_data["event_4"].push(hash[:score_1_event_4])
-      negative_training_data["event_5"].push(hash[:score_1_event_5])
-      negative_training_data["event_6"].push(hash[:score_1_event_6])
-      negative_training_data["event_7"].push(hash[:score_1_event_7])
-      negative_training_data["event_8"].push(hash[:score_1_event_8])
-
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_1_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_2_label"] == "true" 
-      positive_training_data["event_1"].push(hash[:score_2_event_1])
-      positive_training_data["event_2"].push(hash[:score_2_event_2])
-      positive_training_data["event_3"].push(hash[:score_2_event_3])
-      positive_training_data["event_4"].push(hash[:score_2_event_4])
-      positive_training_data["event_5"].push(hash[:score_2_event_5])
-      positive_training_data["event_6"].push(hash[:score_2_event_6])
-      positive_training_data["event_7"].push(hash[:score_2_event_7])
-      positive_training_data["event_8"].push(hash[:score_2_event_8])
-
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_2_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_2_event_1])
-      negative_training_data["event_2"].push(hash[:score_2_event_2])
-      negative_training_data["event_3"].push(hash[:score_2_event_3])
-      negative_training_data["event_4"].push(hash[:score_2_event_4])
-      negative_training_data["event_5"].push(hash[:score_2_event_5])
-      negative_training_data["event_6"].push(hash[:score_2_event_6])
-      negative_training_data["event_7"].push(hash[:score_2_event_7])
-      negative_training_data["event_8"].push(hash[:score_2_event_8])
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_2_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_3_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_3_event_1])
-      positive_training_data["event_2"].push(hash[:score_3_event_2])
-      positive_training_data["event_3"].push(hash[:score_3_event_3])
-      positive_training_data["event_4"].push(hash[:score_3_event_4])
-      positive_training_data["event_5"].push(hash[:score_3_event_5])
-      positive_training_data["event_6"].push(hash[:score_3_event_6])
-      positive_training_data["event_7"].push(hash[:score_3_event_7])
-      positive_training_data["event_8"].push(hash[:score_3_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_3_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_3_event_1])
-      negative_training_data["event_2"].push(hash[:score_3_event_2])
-      negative_training_data["event_3"].push(hash[:score_3_event_3])
-      negative_training_data["event_4"].push(hash[:score_3_event_4])
-      negative_training_data["event_5"].push(hash[:score_3_event_5])
-      negative_training_data["event_6"].push(hash[:score_3_event_6])
-      negative_training_data["event_7"].push(hash[:score_3_event_7])
-      negative_training_data["event_8"].push(hash[:score_3_event_8])
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_3_event_#{n}".to_sym]) 
+      end
+     
     end
 
     if hash["score_4_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_4_event_1])
-      positive_training_data["event_2"].push(hash[:score_4_event_2])
-      positive_training_data["event_3"].push(hash[:score_4_event_3])
-      positive_training_data["event_4"].push(hash[:score_4_event_4])
-      positive_training_data["event_5"].push(hash[:score_4_event_5])
-      positive_training_data["event_6"].push(hash[:score_4_event_6])
-      positive_training_data["event_7"].push(hash[:score_4_event_7])
-      positive_training_data["event_8"].push(hash[:score_4_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_4_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_4_event_1])
-      negative_training_data["event_2"].push(hash[:score_4_event_2])
-      negative_training_data["event_3"].push(hash[:score_4_event_3])
-      negative_training_data["event_4"].push(hash[:score_4_event_4])
-      negative_training_data["event_5"].push(hash[:score_4_event_5])
-      negative_training_data["event_6"].push(hash[:score_4_event_6])
-      negative_training_data["event_7"].push(hash[:score_4_event_7])
-      negative_training_data["event_8"].push(hash[:score_4_event_8])
-
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_4_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_5_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_5_event_1])
-      positive_training_data["event_2"].push(hash[:score_5_event_2])
-      positive_training_data["event_3"].push(hash[:score_5_event_3])
-      positive_training_data["event_4"].push(hash[:score_5_event_4])
-      positive_training_data["event_5"].push(hash[:score_5_event_5])
-      positive_training_data["event_6"].push(hash[:score_5_event_6])
-      positive_training_data["event_7"].push(hash[:score_5_event_7])
-      positive_training_data["event_8"].push(hash[:score_5_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_5_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_5_event_1])
-      negative_training_data["event_2"].push(hash[:score_5_event_2])
-      negative_training_data["event_3"].push(hash[:score_5_event_3])
-      negative_training_data["event_4"].push(hash[:score_5_event_4])
-      negative_training_data["event_5"].push(hash[:score_5_event_5])
-      negative_training_data["event_6"].push(hash[:score_5_event_6])
-      negative_training_data["event_7"].push(hash[:score_5_event_7])
-      negative_training_data["event_8"].push(hash[:score_5_event_8])
-
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_5_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_6_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_6_event_1])
-      positive_training_data["event_2"].push(hash[:score_6_event_2])
-      positive_training_data["event_3"].push(hash[:score_6_event_3])
-      positive_training_data["event_4"].push(hash[:score_6_event_4])
-      positive_training_data["event_5"].push(hash[:score_6_event_5])
-      positive_training_data["event_6"].push(hash[:score_6_event_6])
-      positive_training_data["event_7"].push(hash[:score_6_event_7])
-      positive_training_data["event_8"].push(hash[:score_6_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_6_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_6_event_1])
-      negative_training_data["event_2"].push(hash[:score_6_event_2])
-      negative_training_data["event_3"].push(hash[:score_6_event_3])
-      negative_training_data["event_4"].push(hash[:score_6_event_4])
-      negative_training_data["event_5"].push(hash[:score_6_event_5])
-      negative_training_data["event_6"].push(hash[:score_6_event_6])
-      negative_training_data["event_7"].push(hash[:score_6_event_7])
-      negative_training_data["event_8"].push(hash[:score_6_event_8])
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_6_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_7_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_7_event_1])
-      positive_training_data["event_2"].push(hash[:score_7_event_2])
-      positive_training_data["event_3"].push(hash[:score_7_event_3])
-      positive_training_data["event_4"].push(hash[:score_7_event_4])
-      positive_training_data["event_5"].push(hash[:score_7_event_5])
-      positive_training_data["event_6"].push(hash[:score_7_event_6])
-      positive_training_data["event_7"].push(hash[:score_7_event_7])
-      positive_training_data["event_8"].push(hash[:score_7_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_7_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_7_event_1])
-      negative_training_data["event_2"].push(hash[:score_7_event_2])
-      negative_training_data["event_3"].push(hash[:score_7_event_3])
-      negative_training_data["event_4"].push(hash[:score_7_event_4])
-      negative_training_data["event_5"].push(hash[:score_7_event_5])
-      negative_training_data["event_6"].push(hash[:score_7_event_6])
-      negative_training_data["event_7"].push(hash[:score_7_event_7])
-      negative_training_data["event_8"].push(hash[:score_7_event_8])
-
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_7_event_#{n}".to_sym]) 
+      end
     end
 
     if hash["score_8_label"] == "true"
-      positive_training_data["event_1"].push(hash[:score_8_event_1])
-      positive_training_data["event_2"].push(hash[:score_8_event_2])
-      positive_training_data["event_3"].push(hash[:score_8_event_3])
-      positive_training_data["event_4"].push(hash[:score_8_event_4])
-      positive_training_data["event_5"].push(hash[:score_8_event_5])
-      positive_training_data["event_6"].push(hash[:score_8_event_6])
-      positive_training_data["event_7"].push(hash[:score_8_event_7])
-      positive_training_data["event_8"].push(hash[:score_8_event_8])
+      (1..8).each do |n|
+        positive_training_data["event_#{n}"].push(hash["score_8_event_#{n}".to_sym]) 
+      end
     else
-      negative_training_data["event_1"].push(hash[:score_8_event_1])
-      negative_training_data["event_2"].push(hash[:score_8_event_2])
-      negative_training_data["event_3"].push(hash[:score_8_event_3])
-      negative_training_data["event_4"].push(hash[:score_8_event_4])
-      negative_training_data["event_5"].push(hash[:score_8_event_5])
-      negative_training_data["event_6"].push(hash[:score_8_event_6])
-      negative_training_data["event_7"].push(hash[:score_8_event_7])
-      negative_training_data["event_8"].push(hash[:score_8_event_8])
+      (1..8).each do |n|
+        negative_training_data["event_#{n}"].push(hash["score_8_event_#{n}".to_sym]) 
+      end
     end
 
 
