@@ -8,4 +8,7 @@
      <%=link_to score.created_at, generator_score_path(id: score.id)%>
      <br>
   <%end%>
+  <p>
+    <%=link_to "Generator #{@generator.id}", generator_path(id: @generator.id) %>
+  </p>
 </div>

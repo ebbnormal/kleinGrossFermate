@@ -1,4 +1,7 @@
 <div class="wrapper">
+  <h1>
+    New Score
+  </h1>
  <%-if @score_generated[0] == 1%>
  <%= "Klein"%>
  <% elsif @score_generated[0] == 2%>
@@ -77,6 +80,7 @@
     <%= f.submit "Archive Score"%>
   </p>
 <% end %>
+<%=link_to "Back to Generator", generator_path(id: @generator.id) %>
 </div>
 
 

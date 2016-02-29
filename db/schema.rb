@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160229024347) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "generators", force: true do |t|
     t.float    "event1_mean"
     t.float    "event1_variance"
