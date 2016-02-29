@@ -1,19 +1,19 @@
 <div class="wrapper">
-<%= form_for :generator, url:generators_path do |f| %>
-<div class="errors">
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: name %>
-  <% end %>
-</div>
+  <%= form_for :generator, url:generators_path do |f| %>
+  <div class="errors">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
+  </div>
 
-<div class="training_score">
-  <p>
-    <h2>
-    <%= f.label :score_1 %>
-    </h2>
-   <p>
+  <div class="training_score">
+    <p>
+      <h2>
+      <%= f.label :score_1 %>
+      </h2>
+    <p>
     <h3>
-    <%= f.label :score_1_event_1%>
+      <%= f.label :score_1_event_1%>
     </h3>
     <%= f.label :score_1_event_1, "Klein", value: 1%>
     <% if @score_1_event_1 == 1 %>
@@ -37,7 +37,7 @@
   </p>
   <p>
     <h3>
-    <%= f.label :score_1_event_2%>
+      <%= f.label :score_1_event_2%>
     </h3>
     <%= f.label :score_1_event_2, "Klein", value: "1"%>
     <% if @score_1_event_2 == 1 %>
@@ -45,9 +45,6 @@
     <%else%>
       <%= f.radio_button :score_1_event_2, 1 %>
     <%end%>
-
-
-
     <%= f.label :score_1_event_2, "Groß", value:"2"%>
     <% if @score_1_event_2 == 2 %>
       <%= f.radio_button :score_1_event_2, 2, {checked: true} %>

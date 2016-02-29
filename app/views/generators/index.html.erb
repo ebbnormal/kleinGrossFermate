@@ -3,11 +3,12 @@
   	Generators Index
   </h1>
   <%@generators.each do |generator|%>
-   <%=link_to generator.created_at, generator_path(generator.id) %>
-   <br>
+    <%=link_to generator.created_at, generator_path(generator.id) %>
+    <br>
   <%end%>
   <p>
   	<%=link_to "New Generator", new_generator_path%>
   	<br>
   	<%=link_to "Home", root_path%>
+  </p>
 </div>

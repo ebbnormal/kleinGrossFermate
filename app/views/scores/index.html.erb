@@ -1,13 +1,14 @@
 <div class="wrapper">
- <h1>
- Score Index
- </h1>
- <h2> Generator - <%=@generator.id%> </h2>
- <p>
-  <%- @scores.each do |score| %>
-     <%=link_to score.created_at, generator_score_path(id: score.id)%>
-     <br>
-  <%end%>
+  <h1>
+    Score Index
+  </h1>
+  <h2> Generator - <%=@generator.id%> </h2>
+  <p>
+    <%- @scores.each do |score| %>
+      <%=link_to score.created_at, generator_score_path(id: score.id)%>
+      <br>
+    <%end%>
+  </p>
   <p>
     <%=link_to "Generator #{@generator.id}", generator_path(id: @generator.id) %>
   </p>
