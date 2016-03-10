@@ -39,21 +39,14 @@ class Generator < ActiveRecord::Base
     until meets_model_criteria == true
       #randomly generate 8 sonic events
       prng = Random.new(Time.now.to_i)
-      new_score[0] = prng.rand(3) + 1
-      new_score[1] = prng.rand(3) + 1
-      new_score[2] = prng.rand(3) + 1
-      new_score[3] = prng.rand(3) + 1
-      new_score[4] = prng.rand(3) + 1
-      new_score[5] = prng.rand(3) + 1
-      new_score[6] = prng.rand(3) + 1
-      new_score[7] = prng.rand(3) + 1
+      (0..7).each do |n|
+        new_score[n] = prng.rand(3) + 1
+      end
       
       #calculate respective probabilities for being in the model's class and
       #and for not belonging in the class
       posterior_positive = calculate_posterior_numerator_postive(new_score)
       posterior_negative = calculate_posterior_numerator_negative(new_score)
-      #Rails.logger.debug("Posterior positive is #{posterior_positive}")
-      #Rails.logger.debug("Posterior negative is #{posterior_negative}")
       if posterior_positive > posterior_negative
         meets_model_criteria = true
       end
@@ -104,88 +97,18 @@ class Generator < ActiveRecord::Base
       negative_training_data["event_#{n}"]  = []
     end
 
-    
-    if hash["score_1_label"]== "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_1_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_1_event_#{n}".to_sym]) 
-      end
-    end
-
-    if hash["score_2_label"] == "true" 
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_2_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_2_event_#{n}".to_sym]) 
+    #label the data as positive or negative
+    (1..8).each do |i|
+      if hash["score_#{i}_label"]== "true"
+        (1..8).each do |n|
+          positive_training_data["event_#{n}"].push(hash["score_#{i}_event_#{n}".to_sym]) 
+        end
+      else
+        (1..8).each do |n|
+          negative_training_data["event_#{n}"].push(hash["score_#{i}_event_#{n}".to_sym]) 
+        end
       end
     end
-
-    if hash["score_3_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_3_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_3_event_#{n}".to_sym]) 
-      end
-     
-    end
-
-    if hash["score_4_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_4_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_4_event_#{n}".to_sym]) 
-      end
-    end
-
-    if hash["score_5_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_5_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_5_event_#{n}".to_sym]) 
-      end
-    end
-
-    if hash["score_6_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_6_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_6_event_#{n}".to_sym]) 
-      end
-    end
-
-    if hash["score_7_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_7_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_7_event_#{n}".to_sym]) 
-      end
-    end
-
-    if hash["score_8_label"] == "true"
-      (1..8).each do |n|
-        positive_training_data["event_#{n}"].push(hash["score_8_event_#{n}".to_sym]) 
-      end
-    else
-      (1..8).each do |n|
-        negative_training_data["event_#{n}"].push(hash["score_8_event_#{n}".to_sym]) 
-      end
-    end
-
 
     
     (1..8).each do |n|
