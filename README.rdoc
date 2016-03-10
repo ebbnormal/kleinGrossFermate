@@ -1,28 +1,11 @@
-== README
+== Klein Gross Fermate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A simple web application to construct models for generating text based scores. The models are built using a simple Naive Bayes classifier. The musical  inspiration draws on the text-based compositions of Karlheinz Stockhausen (e.g. Aus Den Sieben Tagen, Für kommende Zeiten), George Lewis (Artificial Life, Sequel), and Robert Ashley. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Confer: https://en.wikipedia.org/wiki/Naive_Bayes_classifier.
+
+See the app in action: https://kleingrossfermate.herokuapp.com
+
+*  Ruby Version 2.1.1
+
