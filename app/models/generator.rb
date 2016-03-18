@@ -110,7 +110,6 @@ class Generator < ActiveRecord::Base
       end
     end
 
-    
     (1..8).each do |n|
       event_n_mean = "event#{n}_mean".to_sym
       event_n_variance = "event#{n}_variance".to_sym
@@ -130,6 +129,5 @@ class Generator < ActiveRecord::Base
       update_attribute(event_n_negative_mean, negative_mean)
       update_attribute(event_n_negative_variance, negative_variance)
     end
-
   end
 end
