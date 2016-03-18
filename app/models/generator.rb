@@ -56,7 +56,7 @@ class Generator < ActiveRecord::Base
   end
 
   def calculate_mean(data, n)
-  	sum = 0
+    sum = 0
     data["event_#{n}"].each do |x|
       sum = sum + x.to_i
     end
